@@ -28,43 +28,41 @@ function ProductCard({
   };
 
   return (
-    <>
-      <div
-        key={id}
-        className="w-[230px] select-none  cursor-pointer pb-2 mb-3 h-auto bg-sky-50 p-0.5 shadow-sm shadow-orange-400"
-      >
-        {/* card image  */}
-        <div className="w-full h-[150px] relative">
-          <Image src={img} alt="no image" fill={true} className="rounded-md" />
-        </div>
+    <div
+      key={id}
+      className="w-[230px] select-none  cursor-pointer pb-2 mb-3 h-auto bg-sky-50 p-0.5 shadow-sm shadow-orange-400"
+    >
+      {/* card image  */}
+      <div className="w-full h-[150px] relative">
+        <Image src={img} alt="no image" fill={true} className="rounded-md" />
+      </div>
 
-        {/* card center  */}
-        <div className="flex justify-between items-center p-1 pb-0.5 ">
-          <div className="p-0.5 pb-0 cursor-pointer text-md ">{title}</div>
-          <div className="p-0.5 pb-0 cursor-pointer text-md ">{country}</div>
-        </div>
+      {/* card center  */}
+      <div className="flex justify-between items-center p-1 pb-0.5 ">
+        <div className="p-0.5 pb-0 cursor-pointer text-md ">{title}</div>
+        <div className="p-0.5 pb-0 cursor-pointer text-md ">{country}</div>
+      </div>
 
-        {/* card discription  */}
+      {/* card discription  */}
 
-        <div className="p-0.5 text-sm">{SliceSting(discription, 80)}</div>
+      <div className="p-0.5 text-sm">{SliceSting(discription, 80)}</div>
 
-        {/* card footer  */}
+      {/* card footer  */}
 
-        <div className="flex justify-between items-center p-1">
-          {discount ? (
-            <div className="text-red-600 select-none">{price}</div>
-          ) : (
-            <div className="text-red-600 select-none">
-              <del> {price}</del>
-              {discount}
-            </div>
-          )}
-          <div className="text-white bg-green-500 cursor-pointer p-1 rounded-md px-2 hover:bg-green-400 select-none">
-            Add Card
+      <div className="flex justify-between items-center p-1">
+        {discount ? (
+          <div className="text-red-600 select-none">{price}</div>
+        ) : (
+          <div className="text-red-600 select-none">
+            <del> {price}</del>
+            {discount}
           </div>
+        )}
+        <div className="text-white bg-green-500 cursor-pointer p-1 rounded-md px-2 hover:bg-green-400 select-none">
+          Add Card
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -351,7 +351,10 @@ export default function Home() {
             <ul className="p-1">
               {CountryList.map((country, index) => {
                 return (
-                  <li className="indent-4 text-md p-2 cursor-pointer flex gap-1 justify-start  items-center">
+                  <li
+                    key={index}
+                    className="indent-4 text-md p-2 cursor-pointer flex gap-1 justify-start  items-center"
+                  >
                     <label
                       className="cursor-pointer ml-2 text-gray-70"
                       htmlFor={country}
@@ -385,7 +388,10 @@ export default function Home() {
             <ul className="p-1">
               {productCategoryList.map((product, index) => {
                 return (
-                  <li className="indent-4 text-md p-2 cursor-pointer flex gap-1 justify-start  items-center">
+                  <li
+                    key={index}
+                    className="indent-4 text-md p-2 cursor-pointer flex gap-1 justify-start  items-center"
+                  >
                     <label
                       className="cursor-pointer ml-2 text-gray-70"
                       htmlFor={product}
@@ -438,7 +444,7 @@ export default function Home() {
               id="countries"
               className="bg-gray-50 cursor-pointer border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              <option selected>Mix</option>
+              <option>Mix</option>
               <option value="1">1</option>
               <option value="5">5</option>
               <option value="10">10</option>
@@ -458,7 +464,7 @@ export default function Home() {
               id="countries"
               className="bg-gray-50 border cursor-pointer border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              <option selected>Max</option>
+              <option>Max</option>
               <option value="1">1</option>
               <option value="5">5</option>
               <option value="10">10</option>
@@ -496,6 +502,7 @@ export default function Home() {
                       id={id}
                       discription={discription}
                       discount={discount}
+                      key={id}
                     />
                   );
                 }
@@ -508,7 +515,7 @@ export default function Home() {
                     title={product.title}
                     price={product.price}
                     id={product.id}
-                    key={index}
+                    key={product.id}
                     discription={product.discription}
                     discount={product.discount}
                   />
