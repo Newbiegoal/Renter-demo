@@ -29,7 +29,10 @@ function ProductCard({
 
   return (
     <>
-      <div className="w-[230px] select-none  cursor-pointer pb-2 mb-3 h-auto bg-sky-50 p-0.5 shadow-sm shadow-orange-400">
+      <div
+        key={id}
+        className="w-[230px] select-none  cursor-pointer pb-2 mb-3 h-auto bg-sky-50 p-0.5 shadow-sm shadow-orange-400"
+      >
         {/* card image  */}
         <div className="w-full h-[150px] relative">
           <Image src={img} alt="no image" fill={true} className="rounded-md" />
