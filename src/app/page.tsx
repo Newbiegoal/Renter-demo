@@ -32,7 +32,7 @@ const productList = [
     country: "Veitname",
   },
   {
-    id: 1,
+    id: 3,
     img: require("./../../public/cool.png"),
     title: "Kitchen",
     price: "120$",
@@ -42,7 +42,7 @@ const productList = [
     country: "United states",
   },
   {
-    id: 2,
+    id: 4,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -53,7 +53,7 @@ const productList = [
     country: "Egypt",
   },
   {
-    id: 1,
+    id: 5,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -64,7 +64,7 @@ const productList = [
     country: "Japan",
   },
   {
-    id: 2,
+    id: 6,
     img: require("./../../public/3.jpg"),
     title: "Kitchen",
     price: "10$",
@@ -75,7 +75,7 @@ const productList = [
     country: "Korea",
   },
   {
-    id: 1,
+    id: 7,
     img: require("./../../public/two.jpg"),
     title: "Home",
     price: "12$",
@@ -86,7 +86,7 @@ const productList = [
     country: "Spain",
   },
   {
-    id: 2,
+    id: 8,
     img: require("./../../public/two.jpg"),
     title: "Bad cooker",
     price: "1$",
@@ -97,7 +97,7 @@ const productList = [
     country: "Veitname",
   },
   {
-    id: 1,
+    id: 9,
     img: require("./../../public/cool.png"),
     title: "Kitchen",
     price: "120$",
@@ -107,7 +107,7 @@ const productList = [
     country: "United states",
   },
   {
-    id: 2,
+    id: 10,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -118,7 +118,7 @@ const productList = [
     country: "Egypt",
   },
   {
-    id: 1,
+    id: 11,
     img: require("./../../public/apple.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -129,7 +129,7 @@ const productList = [
     country: "Japan",
   },
   {
-    id: 2,
+    id: 12,
     img: require("./../../public/bg.jpg"),
     title: "Kitchen",
     price: "10$",
@@ -140,7 +140,7 @@ const productList = [
     country: "Korea",
   },
   {
-    id: 1,
+    id: 13,
     img: require("./../../public/me.jpg"),
     title: "Home",
     price: "12$",
@@ -151,7 +151,7 @@ const productList = [
     country: "Spain",
   },
   {
-    id: 2,
+    id: 14,
     img: require("./../../public/two.jpg"),
     title: "Bad cooker",
     price: "1$",
@@ -162,7 +162,7 @@ const productList = [
     country: "Veitname",
   },
   {
-    id: 1,
+    id: 15,
     img: require("./../../public/cool.png"),
     title: "Kitchen",
     price: "120$",
@@ -172,7 +172,7 @@ const productList = [
     country: "United states",
   },
   {
-    id: 2,
+    id: 16,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -183,7 +183,7 @@ const productList = [
     country: "Egypt",
   },
   {
-    id: 1,
+    id: 17,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -194,7 +194,7 @@ const productList = [
     country: "Japan",
   },
   {
-    id: 2,
+    id: 18,
     img: require("./../../public/3.jpg"),
     title: "Kitchen",
     price: "10$",
@@ -205,7 +205,7 @@ const productList = [
     country: "Korea",
   },
   {
-    id: 1,
+    id: 19,
     img: require("./../../public/two.jpg"),
     title: "Home",
     price: "12$",
@@ -216,7 +216,7 @@ const productList = [
     country: "Spain",
   },
   {
-    id: 2,
+    id: 20,
     img: require("./../../public/two.jpg"),
     title: "Bad cooker",
     price: "1$",
@@ -227,7 +227,7 @@ const productList = [
     country: "Veitname",
   },
   {
-    id: 1,
+    id: 21,
     img: require("./../../public/cool.png"),
     title: "Kitchen",
     price: "120$",
@@ -237,7 +237,7 @@ const productList = [
     country: "United states",
   },
   {
-    id: 2,
+    id: 22,
     img: require("./../../public/two.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -248,7 +248,7 @@ const productList = [
     country: "Egypt",
   },
   {
-    id: 1,
+    id: 23,
     img: require("./../../public/apple.jpg"),
     title: "Kitchen",
     price: "120$",
@@ -259,7 +259,7 @@ const productList = [
     country: "Japan",
   },
   {
-    id: 2,
+    id: 24,
     img: require("./../../public/bg.jpg"),
     title: "Kitchen",
     price: "10$",
@@ -482,7 +482,7 @@ export default function Home() {
                   country,
                   price,
                   title,
-                  product,
+                  id,
                   discount,
                   discription,
                   index,
@@ -493,7 +493,7 @@ export default function Home() {
                       country={country}
                       title={title}
                       price={price}
-                      key={index}
+                      id={id}
                       discription={discription}
                       discount={discount}
                     />
@@ -507,6 +507,7 @@ export default function Home() {
                     country={product.country}
                     title={product.title}
                     price={product.price}
+                    id={product.id}
                     key={index}
                     discription={product.discription}
                     discount={product.discount}

@@ -8,8 +8,10 @@ function ProductCard({
   discription,
   discount,
   country,
+  id,
 }: {
   img: string;
+  id: number;
   price: String;
   title: String;
   discription: string;
