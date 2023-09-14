@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 
 // outside imports
 import { X } from "lucide-react";
+import Link from "next/link";
 function Sidebar({
   openSidebar,
   openstatus,
@@ -14,8 +15,8 @@ function Sidebar({
 }) {
   return (
     <div
-      className={`left-0 z-[1000] h-[100vh] bg-zinc-500 top-0
-      overflow-y-scroll   transition-all duration-500 ${
+      className={`left-0 z-[1000] h-full  md:h-[100vh]  bg-zinc-500 top-0
+      overflow-y-scroll  transition-all duration-500 w-full md:w-[400px] ${
         openSidebar ? "fixed" : "hidden"
       }
       
@@ -37,45 +38,47 @@ function Sidebar({
       <ul className="p-1 pb-5">
         <li>
           <span className="text-2xl block border-b-2 border-solid border-gray-600 shadow-md mb-3 mt-3 shadow-gray-700   p-1 text-center">
-            Tutorial
+            Pages
           </span>
           <ul className="indent-3 ">
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Html
+            <li
+              onClick={() => {
+                openstatus(!openstatus);
+              }}
+              className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 "
+            >
+              <Link
+                onClick={() => {
+                  openstatus(!openstatus);
+                }}
+                href="/"
+              >
+                - Home
+              </Link>
             </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Css
+            <li
+              onClick={() => {
+                openstatus(!openstatus);
+              }}
+              className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 "
+            >
+              <Link href="">- Javascript</Link>
             </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - JavaScript
+            <li
+              onClick={() => {
+                openstatus(!openstatus);
+              }}
+              className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 "
+            >
+              <Link href="">- Flask</Link>
             </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Css
-            </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - JavaScript
-            </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Css
-            </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - JavaScript
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span className="text-2xl block border-b-2 border-solid border-gray-600 shadow-md mb-3 mt-3 shadow-gray-700   p-1 text-center">
-            Setting
-          </span>
-          <ul className="indent-3 ">
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Html
-            </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - Css
-            </li>
-            <li className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 ">
-              - JavaScript
+            <li
+              onClick={() => {
+                openstatus(!openstatus);
+              }}
+              className="p-2 hover:bg-zinc-400 cursor-pointer mt-1 rounded-sm transition-all ease-in-out duration-300 "
+            >
+              <Link href="">- Gemma</Link>
             </li>
           </ul>
         </li>

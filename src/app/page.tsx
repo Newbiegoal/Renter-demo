@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
 import Productcard from "@/components/productcard";
-import { nodeServerPages } from "next/dist/build/webpack/plugins/pages-manifest-plugin";
 // outside imports
 
 const productList = [
@@ -15,7 +14,7 @@ const productList = [
     title: "Home",
     price: "12$",
     discription:
-      "How are you my kitchen that is cool sir ow are you my kitchen that is cool sir",
+      "How are ",
     discount: 10,
     catagroy: "Cook",
     country: "Spain",
@@ -338,7 +337,8 @@ export default function Home() {
     <div className="flex justify-start w-full items-start">
       {/* sidebar home  */}
       <div
-        className={`w-[270px] h-[90vh] bg-zinc-700 text-white fixed  left-0 top-[60px] overflow-y-scroll pb-8
+        className={`w-0 md:w-[270px] h-[90vh] bg-zinc-700 text-white  left-0 top-[60px] overflow-y-scroll pb-8
+      fixed 
         }`}
       >
         {/* product filter first section  */}
@@ -419,10 +419,11 @@ export default function Home() {
 
       {/* home page content  */}
 
-      <div className="ml-[270px] flex-1 ">
+      <div className="sm:ml-0 md:ml-[270px] flex-1 ">
         {/* search filter filed  */}
-        <div className="flex p-1 my-6 justify-center items-center gap-1 w-full px-5">
-          <div className="flex justify-center items-center gap-1 border-solid border-2 border-zinc-400 rounded-full py-1 px-2  flex-1 ">
+
+        <div className="flex flex-col lg:flex-row  p-1 my-6 justify-center items-center gap-3 lg:gap-1 w-full px-l md:px-5">
+          <div className="flex justify-center items-center gap-1 border-solid border-2 border-zinc-400 rounded-full py-1 px-2 w-full md:w-auto max-w-[600px] flex-1 ">
             <BsSearch size={20} />
             <input
               value={searchValue}
@@ -436,13 +437,13 @@ export default function Home() {
           </div>
           {/* price filter inputs  */}
 
-          <div className="flex select-none justify-center items-center gap-1">
+          <div className="flex select-none justify-center items-center gap-2">
             <h1 className="indent-2 px-1">Price</h1>
             {/* min price  */}
 
             <select
               id="countries"
-              className="bg-gray-50 cursor-pointer border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 min-w-[50px] cursor-pointer border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               <option>Mix</option>
               <option value="1">1</option>
@@ -462,7 +463,7 @@ export default function Home() {
 
             <select
               id="countries"
-              className="bg-gray-50 border cursor-pointer border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 min-w-[50px]   border cursor-pointer border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-zinc-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               <option>Max</option>
               <option value="1">1</option>
@@ -491,7 +492,6 @@ export default function Home() {
                   id,
                   discount,
                   discription,
-                  index,
                 }: any) => {
                   return (
                     <Productcard

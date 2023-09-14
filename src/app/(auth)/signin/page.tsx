@@ -28,7 +28,7 @@ function Signin() {
       <form
         onSubmit={HandleSubmit}
         method="post"
-        className="flex min-w-[400px] flex-col justify-center items-center p-4 py-6 rounded-xl border-2 border-gray-950 border-solid my-9"
+        className="flex w-full md:w-[400px] flex-col justify-center mx-2 md:mx-0 items-center p-4 py-6 rounded-md md:rounded-xl border-2 border-gray-950 border-solid my-5 md:my-9"
       >
         {/* form title */}
         <h1 className="text-xl opacity-70 select-none">Renter Login</h1>

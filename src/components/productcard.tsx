@@ -22,7 +22,8 @@ function ProductCard({
     if (string.length > n - 1) {
       const str = string.substring(0, n - 1) + "...";
       return str;
-    } else {
+    
+    }else{
       return string;
     }
   };
@@ -30,10 +31,10 @@ function ProductCard({
   return (
     <div
       key={id}
-      className="w-[230px] select-none  cursor-pointer pb-2 mb-3 h-auto bg-sky-50 p-0.5 shadow-sm shadow-orange-400"
+      className="w-full sm:w-[260px] p-3 md:p-1 select-none  cursor-pointer pb-2 mb-3  bg-sky-50 shadow-sm shadow-orange-400 h-full"
     >
       {/* card image  */}
-      <div className="w-full h-[150px] relative">
+      <div className="w-full h-[200px] md:h-[150px] relative">
         <Image src={img} alt="no image" fill={true} className="rounded-md" />
       </div>
 

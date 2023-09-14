@@ -30,7 +30,7 @@ function Signup() {
       <form
         onSubmit={HandleSubmit}
         method="post"
-        className="flex min-w-[400px] flex-col justify-center items-center p-4 py-6 my-10 rounded-xl border-2 border-gray-950 border-solid"
+        className="flex w-full md:w-[400px] flex-col justify-center items-center p-1 md:p-4 py-6 my-5 md:my-10 mx-2 md:mx-0 rounded-md md:rounded-xl border-2 border-gray-950 border-solid"
       >
         {/* form title */}
         <h1 className="text-xl opacity-70 select-none">Renter Create acount</h1>
